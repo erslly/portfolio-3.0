@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('anime.jpg') no-repeat center center/cover;
+    font-family: 'Arial', sans-serif;
+    flex-direction: column; 
+}
+
+.music-control {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+.music-control button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgba(249, 199, 79, 0.8);
+    transition: color 0.3s, transform 0.3s, opacity 0.3s;
+    opacity: 0.8; 
+}
+
+.music-control button:hover {
+    color: #ff7f50; 
+    transform: scale(1.2);
+    opacity: 1; 
+}
+
+.volume-slider-container {
+    display: none; 
+    position: absolute;
+    top: 50px;
+    left: -100px; 
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    transition: left 0.3s ease;
+}
+
+.music-control:hover .volume-slider-container {
+    display: block;
+    left: 60px; 
+}
+
+#volumeSlider {
+    width: 200px;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 10px;
+    height: 5px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+#volumeSlider:hover {
+    background-color: #f9c74f; 
+}
+
+#volumeSlider::-webkit-slider-runnable-track {
+    background: #f9c74f;
+    border-radius: 10px;
+    height: 5px;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #ff7f50;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#volumeSlider::-moz-range-track {
+    background: #f9c74f;
+    border-radius: 10px;
+    height: 5px;
+}
+
+#volumeSlider::-moz-range-thumb {
+    background: #ff7f50;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    width: 450px;
+    text-align: center;
+    color: #f9c74f;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+.card .icon img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.card .icon img:hover {
+    transform: scale(1.1);
+}
+
+.name {
+    font-size: 2.5rem;
+    margin: 15px 0;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff00ff, #00ffff, #ffff00);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 6s infinite linear;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.contacts {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+}
+
+.contacts .icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 5px;
+    text-decoration: none; 
+}
+
+.contacts .icon-link i {
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.contacts .icon-link:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.contacts .icon-link:hover i {
+    transform: rotate(360deg);
+}
+
+
+.view-count {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+body {
+    cursor: url('cursor.cur'), auto; 
+}
+.developer-info {
+    position: fixed; 
+    bottom: 10px; 
+    right: 10px; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: #fff; 
+    font-family: 'Minecraft', sans-serif; 
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    z-index: 9999; 
+    transition: transform 0.3s ease; 
+}
+
+.developer-info:hover {
+    transform: scale(1.1); 
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url('https://cdn.jsdelivr.net/gh/sergiolopes/minecraft-font@v1.0.0/minecraft.ttf'); /* Minecraft fontu için link */
+}
