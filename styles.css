@@ -213,5 +213,5 @@ body {
 
 @font-face {
     font-family: 'Minecraft';
-    src: url('https://cdn.jsdelivr.net/gh/sergiolopes/minecraft-font@v1.0.0/minecraft.ttf'); /* Minecraft fontu için link */
+    src: url('https://cdn.jsdelivr.net/gh/sergiolopes/minecraft-font@v1.0.0/minecraft.ttf'); 
 }
